@@ -1,0 +1,23 @@
+:root {
+  // Colors
+  --color-first: #21142c;
+  --color-second: #db5252;
+  --color-third: #32a2c5;
+  --color-fourth: #392d3b;
+  --color-bg: #e4e4e4;
+
+  //z-index
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+$breakpoints: (
+  mb: 360,
+  mb-ls: 640,
+  m: 960px,
+  l: 1200px,
+  xl: 1600px
+);

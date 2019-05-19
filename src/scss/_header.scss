@@ -1,0 +1,89 @@
+.main-header {
+  position: relative;
+}
+.mb-main-menu {
+  background-color: var(--color-first);
+  padding: 1rem 0.5rem;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mb-logo {
+  color: #fff;
+  border: 2px solid var(--color-third);
+  padding: 0.4rem;
+}
+.mb-icons {
+  color: #fff;
+  justify-content: center;
+  height: 1rem;
+
+  & i {
+    cursor: pointer;
+    position: relative;
+  }
+  & i:nth-child(2) {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    padding: 0 0.7rem;
+    margin: 0 0.5rem;
+  }
+}
+.shopping-cart-counter {
+  position: absolute;
+  padding: 0.1rem 0.3rem;
+  background-color: var(--color-second);
+  border-radius: 50%;
+  top: 0;
+  right: -0.9rem;
+}
+
+.mb-burger {
+  width: 1.5rem;
+  height: 1.1rem;
+  $color: #fff;
+  background-image: linear-gradient(
+    $color 15%,
+    transparent 15%,
+    transparent 42.5%,
+    $color 42.5%,
+    $color 57.5%,
+    transparent 57.5%,
+    transparent 85%,
+    $color 85%,
+    $color 100%
+  );
+  cursor: pointer;
+}
+
+.mb-menu {
+  display: none;
+  z-index: var(--z-fixed);
+  position: absolute;
+  width: 100%;
+  top: 100%;
+
+  &__list {
+    background-color: rgba(33, 20, 44, 0.7);
+  }
+  &__item {
+    border-bottom: 1px solid var(--color-first);
+  }
+  &__link {
+    width: 100%;
+    display: block;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    @include animationInOut;
+  }
+}
+
+.mb-menu__link:hover {
+  background-color: rgba(33, 20, 44, 0.9);
+}
+
+.mb-menu-active {
+  display: block;
+}

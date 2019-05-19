@@ -1,0 +1,13 @@
+.l-container {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+}
+.col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+}
+
+.flex {
+  display: flex;
+}

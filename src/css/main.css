@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
+:root {
+  --color-first: #21142c;
+  --color-second: #db5252;
+  --color-third: #32a2c5;
+  --color-fourth: #392d3b;
+  --color-bg: #e4e4e4;
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000; }
+
+.strong {
+  font-weight: 500; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Roboto', sans-serif; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+ul {
+  list-style: none; }
+
+.l-container {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1; }
+
+.col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%); }
+
+.flex {
+  display: flex; }
+
+.main-header {
+  position: relative; }
+
+.mb-main-menu {
+  background-color: var(--color-first);
+  padding: 1rem 0.5rem;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center; }
+
+.mb-logo {
+  color: #fff;
+  border: 2px solid var(--color-third);
+  padding: 0.4rem; }
+
+.mb-icons {
+  color: #fff;
+  justify-content: center;
+  height: 1rem; }
+  .mb-icons i {
+    cursor: pointer;
+    position: relative; }
+  .mb-icons i:nth-child(2) {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    padding: 0 0.7rem;
+    margin: 0 0.5rem; }
+
+.shopping-cart-counter {
+  position: absolute;
+  padding: 0.1rem 0.3rem;
+  background-color: var(--color-second);
+  border-radius: 50%;
+  top: 0;
+  right: -0.9rem; }
+
+.mb-burger {
+  width: 1.5rem;
+  height: 1.1rem;
+  background-image: linear-gradient(#fff 15%, transparent 15%, transparent 42.5%, #fff 42.5%, #fff 57.5%, transparent 57.5%, transparent 85%, #fff 85%, #fff 100%);
+  cursor: pointer; }
+
+.mb-menu {
+  display: none;
+  z-index: var(--z-fixed);
+  position: absolute;
+  width: 100%;
+  top: 100%; }
+  .mb-menu__list {
+    background-color: rgba(33, 20, 44, 0.7); }
+  .mb-menu__item {
+    border-bottom: 1px solid var(--color-first); }
+  .mb-menu__link {
+    width: 100%;
+    display: block;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.2s ease-in-out; }
+
+.mb-menu__link:hover {
+  background-color: rgba(33, 20, 44, 0.9); }
+
+.mb-menu-active {
+  display: block; }
