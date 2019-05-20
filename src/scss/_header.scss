@@ -1,5 +1,5 @@
 .main-header {
-  position: relative;
+  
 }
 .mb-main-menu {
   background-color: var(--color-first);
@@ -7,6 +7,7 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .mb-logo {
@@ -18,6 +19,7 @@
   color: #fff;
   justify-content: center;
   height: 1rem;
+  font-size: 1rem;
 
   & i {
     cursor: pointer;
@@ -26,8 +28,8 @@
   & i:nth-child(2) {
     border-left: 1px solid #fff;
     border-right: 1px solid #fff;
-    padding: 0 0.7rem;
-    margin: 0 0.5rem;
+    padding: 0 .7rem;
+    margin: 0 0.7rem;
   }
 }
 .shopping-cart-counter {
@@ -61,20 +63,21 @@
   display: none;
   z-index: var(--z-fixed);
   position: absolute;
-  width: 100%;
+  width: 100vw;
   top: 100%;
+  left: 0;
+  background-color: rgba(33, 20, 44, 0.9);
 
   &__list {
-    background-color: rgba(33, 20, 44, 0.7);
   }
   &__item {
-    border-bottom: 1px solid var(--color-first);
+    border-bottom: 2px solid var(--color-first);
   }
   &__link {
     width: 100%;
     display: block;
     color: #fff;
-    padding: 1rem;
+    padding: 2rem 0;
     text-align: center;
     @include animationInOut;
   }
@@ -86,4 +89,81 @@
 
 .mb-menu-active {
   display: block;
+}
+
+.main-hero{
+  height: 300px;
+  background-image: url(../../src/img/banner-header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: red;
+  background-position: top 0px left 0px;
+  position: relative;
+
+  &::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-first);
+    opacity: .7;
+  }
+}
+
+.main-menu{
+  display: none;
+}
+
+.hero-content{
+  width: 308px;
+  position: relative;
+  color: #fff;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right:auto;
+  text-transform: uppercase;
+  text-align: center;
+
+  &__intro{
+    display: inline-block;
+    margin-bottom: .5rem;
+    
+  }
+
+  &__title{
+    display: inline-block;
+    border-top: 9px solid var(--color-second);
+    border-left: 9px solid var(--color-second);
+    border-right: 9px solid var(--color-second);
+    padding: .3rem 2.3rem;
+    position: relative;
+
+    &::before, &::after{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 30%;
+      height: 9px;
+      background-color: var(--color-second);
+      
+    }
+    &::before{
+      bottom: -9px;  
+      left: -9px;
+    }
+    &::after{
+      bottom: -9px;  
+      right: -9px;
+    }
+  }
+
+  &__subtitle{
+    display: block;
+    position: relative;
+    top: -6px;
+  }
+
 }
