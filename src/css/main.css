@@ -368,7 +368,7 @@ ul {
 .woman-container {
   height: 290px;
   position: relative;
-  background-image: url(../../../src/img/disenos-mujeres.jpg);
+  background-image: url(../img/disenos-mujeres.jpg);
   background-size: cover;
   background-position: 50% 20%;
   padding-top: 4.5rem;
@@ -415,7 +415,7 @@ ul {
 .tshirts-container {
   height: 264px;
   position: relative;
-  background-image: url(../../../src/img/img-camisetas.jpg);
+  background-image: url(../img/img-camisetas.jpg);
   background-size: cover;
   background-position: 50% 50%;
   padding-top: 7rem;
@@ -456,7 +456,7 @@ ul {
   justify-content: flex-end;
   height: 263px;
   position: relative;
-  background-image: url(../../../src/img/img-stripytops.jpg);
+  background-image: url(../img/img-stripytops.jpg);
   background-size: cover;
   background-position: 50% 50%;
   padding-top: 2rem;
@@ -489,7 +489,7 @@ ul {
 .men-container {
   height: 290px;
   position: relative;
-  background-image: url(../../../src/img/disenos-hombres.jpg);
+  background-image: url(../img/disenos-hombres.jpg);
   background-size: cover;
   background-position: 50% 20%;
   padding-top: 4.5rem;
