@@ -1,0 +1,222 @@
+// OFFERS
+.main-offers{}
+  
+  .top-offers{
+    margin: 1.5rem auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .offers-title{
+    width: 340px;
+    padding: .5rem 1rem;
+    background-color: var(--color-fourth);
+    text-align: center;
+  }
+  
+  .nav-products{
+    width: 95%;
+    margin-top: 1rem;
+    justify-content: space-between;
+  
+    &__left, &__right{
+      height: 100%;
+      margin-top: 80px;
+      font-size: 3rem;
+      color: var(--color-fourth);
+      cursor: pointer;
+    }
+  }
+  
+  .products{
+    flex-direction: row;
+  }
+  
+  .product-item{
+    display: grid; 
+    grid-template-columns: 1;
+    grid-template-rows: 210px 48px 42px 43px;
+    grid-gap: 1rem;
+  
+    &__img{
+      display:block;
+      width: 258px;
+      height: 210px;
+      border: 3px solid var(--color-fourth);
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+  
+    &__price,  &__name{
+      text-align: center;
+    }
+  
+  
+  }
+  // END OFFERS ///////////////////
+  
+  // WOMAN
+  .main-woman{}
+  .woman-container{
+      height: 290px;
+      position: relative;
+      background-image: url(../../../src/img/disenos-mujeres.jpg);
+      background-size: cover;
+      background-position: 50% 20%;
+      padding-top: 4.5rem;
+      padding-left: 1rem;
+
+      &::before{
+        @include efectBgColor(var(--color-third),0.7);
+      }
+  }
+  .woman-content{
+      flex-direction: column;
+      width: 300px;
+      position: relative;
+
+      &__title{
+          display: block;
+          width: 180px;
+          margin-bottom: .8rem;
+      }
+
+      &__subtitle{
+          display: inline-block;
+          margin-bottom: .8rem;
+        
+          @include decorateSubtitle;
+      }
+
+      &__button{
+          width: 234px;
+      }
+  }
+
+  // END WOMAN ///////////////////
+  
+  // OTHER SECTIONS
+  .main-others{}
+  .others-container{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, auto));
+}
+  .tshirts-container{
+    height: 264px;
+    position: relative;
+    background-image: url(../../../src/img/img-camisetas.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    padding-top: 7rem;
+    padding-left: 1rem;
+
+    &::before{
+        @include efectBgColor(#000,0.5);
+      }
+  }
+  .tshirts-content{
+    width: 220px;
+    position: relative;
+
+    &__title{
+        margin-bottom: .5rem;
+    }
+
+    &__subtitle{
+        display: inline-block;
+        margin-bottom: .5rem;
+      
+        @include decorateSubtitle;
+    }
+
+    &__button{
+        width: 145px;
+    }
+  }
+
+  .stripy-container{
+    justify-content: flex-end;
+    height: 263px;
+    position: relative;
+    background-image: url(../../../src/img/img-stripytops.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    padding-top: 2rem;
+    padding-right: .6rem;
+  }
+
+  .stripy-content{
+    flex-direction: column;
+    align-items: flex-end;
+    width: 220px;
+    position: relative;
+
+    &__title{
+        width: 150px;
+        margin-bottom: .5rem;
+        text-align: right;
+    }
+
+    &__subtitle{
+        margin-bottom: .5rem;
+
+        @include decorateSubtitle;
+    }
+
+    &__button{
+        width: 145px;
+    }
+  }
+
+
+  // END OTHER SECTIONS ///////////////////
+  
+  // MEN
+.main-men{}
+  .men-container{
+      height: 290px;
+      position: relative;
+      background-image: url(../../../src/img/disenos-hombres.jpg);
+      background-size: cover;
+      background-position: 50% 20%;
+      padding-top: 4.5rem;
+      padding-right: 1rem;
+
+      &::before{
+        @include efectBgColor(var(--color-second),0.5);
+      }
+  }
+  .men-content{
+      float: right;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 300px;
+      position: relative;
+
+      &__title{
+          display: block;
+          width: 180px;
+          margin-bottom: .8rem;
+          text-align: right;
+      }
+
+      &__subtitle{
+          display: inline-block;
+          margin-bottom: .8rem;
+        
+          @include decorateSubtitle;
+      }
+
+      &__button{
+          width: 234px;
+      }
+  }
+  // END MEN ///////////////////
+  
+  // FEATURED
+  
+  // END FEATURED ///////////////////
+  
+  // SHIP METHOD
+  
+  // END SHIP METHOD ///////////////////

@@ -1,3 +1,4 @@
+// HEADER
 .main-header {
   
 }
@@ -101,15 +102,7 @@
   position: relative;
 
   &::before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: var(--color-first);
-    opacity: .7;
+    @include efectBgColor(var(--color-first),0.7);
   }
 }
 
@@ -167,3 +160,4 @@
   }
 
 }
+// END HEADER ///////////////////

@@ -1,7 +1,4 @@
-.strong {
-  font-weight: 500;
-}
-
+// MAIN HERO
 .t-hero-intro{
   font-size: 12px;
   color: var (--color-fourth);
@@ -18,6 +15,71 @@
 .t-hero-subtitle{
   font-size: 19px;
   color: #fff;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 2px;
+}
+// END MAIN HERO /////////////////////////
+
+// OFFERS
+.t-offer-title{
+  font-size: 36px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.t-offer-price, .t-offer.name{
+  color: var(--color-fourth);
+}
+
+.t-offer-price{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.t-offer-name{
+  font-size: 35px;
+  font-weight: 300;
+}
+// END OFFERS /////////////////////////
+
+// SECTIONS
+.t-section-title{
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.t-section-subtitle{
+  font-size: 1rem;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.t-section-subtitle-small{
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+// END SECTIONS /////////////////////////
+
+
+
+// GENERAL
+.t-bold {
+  font-weight: 500;
+}
+.t-black {
+  font-weight: 900;
+}
+// END GENERAL /////////////////////////
+
+.t-text-dark{
+  color: var(--color-fourth);
 }

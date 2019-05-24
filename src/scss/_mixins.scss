@@ -1,3 +1,66 @@
 @mixin animationInOut {
   transition: all 0.2s ease-in-out;
 }
+
+@mixin efectBgColor ($bgcolor, $opacity:0){
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $bgcolor;
+  opacity: $opacity;
+    
+  
+}
+
+@mixin decorateSubtitle{
+  &::before{
+    content:"-";
+    display: inline-block;
+    position: relative;
+    margin-right: 3px;
+  }
+  &::after{
+    content:"-";
+    display: inline-block;
+    position: relative;
+    margin-left: 3px;
+  }
+}
+
+@mixin buttonCollection($buttonColor){
+    position: relative;
+    justify-content: flex-start;
+    background-color: transparent;
+    padding: .4rem 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $buttonColor;
+    border-bottom: 2px solid $buttonColor;
+
+    &::before{
+        content:"";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 6px;
+        height: 2px;
+        background: $buttonColor;
+        transform: rotate(45deg)
+    }
+    &::after{
+        content:"";
+        display: block;
+        position: absolute;
+        bottom: -4px;
+        right: 0;
+        width: 6px;
+        height: 2px;
+        background: $buttonColor;
+        transform: rotate(-45deg)
+    }
+}

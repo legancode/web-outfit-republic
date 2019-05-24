@@ -2,5 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
 
 // Components
-@import '_variables.scss', 'mixins.scss', 'typography.scss', '_base.scss',
-  '_layout.scss', '_header.scss';
+@import '_variables.scss', 'mixins.scss', 'typography.scss', 'base.scss',
+  'layout.scss', 'header.scss', 'buttons.scss';
+
+// Pages
+@import 'pages/home'; 

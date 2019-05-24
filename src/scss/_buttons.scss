@@ -1,0 +1,42 @@
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:1rem 0;
+    background-color: var(--color-fourth);
+    cursor:pointer;
+}
+
+.button--offer{
+    font-size: 20px;
+    color: #fff;
+    @include animationInOut;
+
+    &:hover{
+        background-color: var(--color-first);
+    }
+}
+
+.button--collection-1{
+    background-color: transparent;
+    padding: .4rem 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 2px solid #fff;
+    @include animationInOut;
+
+    &:hover{
+        background-color: #fff;
+        color: var(--color-third);
+    }
+}
+
+.button--collection-2{
+    @include buttonCollection(#fff);
+}
+
+.button--collection-2-dark{
+    @include buttonCollection(var(--color-fourth))
+    
+}
