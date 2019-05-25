@@ -67,11 +67,61 @@
   letter-spacing: 2px;
 }
 
-// END SECTIONS /////////////////////////
+.t-shop-method-title{
+  font-size: 28px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.t-shop-method-subtitle{
+  font-size: 1rem;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
+.t-shop-method-descrip{
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.t-newsletter-title{
+  font-size: 23px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.t-newsletter-descrip{
+  font-size: 1rem;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: .5px;
+}
+
+// FOOTER
+.t-footer{
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+// END FOOTER /////////////////////////
 
 
 // GENERAL
+.t-regular{
+  font-weight: 400;
+}
 .t-bold {
   font-weight: 500;
 }
@@ -80,6 +130,6 @@
 }
 // END GENERAL /////////////////////////
 
-.t-text-dark{
+.t-dark{
   color: var(--color-fourth);
 }

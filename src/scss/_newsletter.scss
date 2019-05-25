@@ -1,0 +1,56 @@
+.main-newsletter{
+    background-image: url(../img/banner-footer.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 312px;
+    background-color: red;
+}
+
+.newsletter-container{
+    min-width: 360px;
+    height: 100%;
+    padding: 1rem 0;
+}
+
+.newsletter{
+    padding: 0 1rem;
+    flex-direction: column;
+    align-items: center;
+
+    &__title, &__descrip{
+        margin-bottom: .5rem;
+    }
+}
+
+.newsletter-form{
+    width: 311px;
+    flex-direction: column;
+    align-items: center;
+
+    &__input{
+        width: 100%;
+        height: 40px;
+        background-color: transparent;
+        color: #fff;
+        border: 2px solid #fff;
+        margin-bottom: 1rem;
+        // arreglar placeholder con javascript y evitar mucho codigo css
+        @include webKitPlaceholder;
+
+        &:focus{
+            border: 2px solid #fff;
+        }
+    }
+
+    &__button{
+        width: 88px;
+        cursor: pointer;
+    }
+}
+
+.newsletter-logos{
+    width: 100%;
+    height: 57px;
+    background-image: url(../img/logos.png);
+    margin-top: 1.5rem;
+}

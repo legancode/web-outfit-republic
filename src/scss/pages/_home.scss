@@ -214,9 +214,113 @@
   // END MEN ///////////////////
   
   // FEATURED
-  
+  .main-featured{}
+  .featured-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, auto));
+    grid-gap: 2rem;
+    min-width: 360px;
+    padding: 3rem 0;
+  }
+  .featured{
+
+    &__img{
+      display: block;
+      width: 288px;
+      height: 242px;
+      border: 3px solid var(--color-fourth);
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: .5rem;
+    }
+
+    &__title{
+      display: block;
+      text-align: center;
+      margin-bottom: .5rem;
+    }
+
+    &__subtitle{
+      display: block;
+      text-align: center;
+      margin-bottom: .5rem;
+    }
+
+    &__button{
+      width: 288px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
   // END FEATURED ///////////////////
   
   // SHIP METHOD
-  
+  .main-shop-method{}
+
+  .shop-method-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(360px, auto));
+  }
+
+  .free-shop{
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-third);
+    padding: 1.5rem;
+
+    &__title{
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    &__subtitle{
+      margin-bottom: 1rem;
+
+      @include decorateSubtitle;
+    }
+
+   
+  }
+  .free-shop-content{
+    justify-content: space-between;
+    max-width: 400px;
+
+    &__descrip{
+      display: block;
+      width: 60%;
+    }
+
+    &__icon{
+      width: auto;
+      color: #fff;
+      text-align: right;
+      margin: auto 0 auto .5rem;
+    }
+  }
+
+  .credits-shop{
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-second);
+    padding: 1.5rem;
+
+    &__title{
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    &__subtitle{
+      text-align: center;
+      margin-bottom: 1rem;
+
+      @include decorateSubtitle;
+    }
+
+    &__icon{
+      display: block;
+      color: #fff;
+    }
+
+   
+  }
   // END SHIP METHOD ///////////////////

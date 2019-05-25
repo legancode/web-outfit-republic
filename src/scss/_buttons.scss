@@ -40,3 +40,30 @@
     @include buttonCollection(var(--color-fourth))
     
 }
+
+.button--featured{
+    background-color: transparent;
+    padding: 1rem 0;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-fourth);
+    border: 2px solid var(--color-fourth);
+    @include animationInOut;
+
+    &:hover{
+        background-color: var(--color-fourth);
+        color: #fff;
+    }
+}
+
+.button--newsletter{
+    background-color: var(--color-third);
+    padding: 1rem 0;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    border: 2px solid #fff;
+}

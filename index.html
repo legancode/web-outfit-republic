@@ -13,6 +13,8 @@
 
 <body>
   <!-- HEADER -->
+  <!-- Agregado por el momento el div con clase fixed, hasta reemplazarlo por una funcion javascript para dejar fijo el menu  -->
+  <div class="fixed"></div>
   <header class="main-header l-container">
     <nav class="mb-main-menu flex">
       <div class="mb-logo">outfit | <span class="strong">Republic</span></div>
@@ -131,9 +133,9 @@
 
       <div class="stripy-container flex">
         <div class="stripy-content flex">
-          <p class="stripy-content__subtitle t-section-subtitle-small t-text-dark">especial de verano</p>
+          <p class="stripy-content__subtitle t-section-subtitle-small t-dark">especial de verano</p>
           <h3 class="stripy-content__title 
-          t-section-title t-text-dark">stripy <span class="t-black">tops</span></h3>
+          t-section-title t-dark">stripy <span class="t-black">tops</span></h3>
           <a class="stripy-content__button button button--collection-2-dark t-bold">Ver
             coleccion</a>
         </div>
@@ -156,12 +158,107 @@
   <!-- END MEN SECTION -->
 
   <!-- FEATURED SECTION -->
+  <div class="main-featured l-section">
+    <div class="featured-content">
 
+      <div class="featured">
+        <img src="src/img/img-cuero.jpg" alt="Casacas de cuero" class="featured__img">
+        <h4 class="featured__title t-section-title t-dark t-black">cuero</h4>
+        <p class="featured__subtitle t-section-subtitle t-dark t-regular">nuevas increibles casacas</p>
+        <a href="#" class="featured__button button button--featured">comprar casacas</a>
+      </div>
+
+      <div class="featured">
+        <img src="src/img/img-boda.jpg" alt="Vestidos de novia" class="featured__img">
+        <h4 class="featured__title t-section-title t-dark t-black">boda</h4>
+        <p class="featured__subtitle t-section-subtitle t-dark t-regular">ofertas para dias inolvidables</p>
+        <a href="#" class="featured__button button button--featured">comprar vestido de novia</a>
+      </div>
+
+      <div class="featured">
+        <img src="src/img/img-verano.jpg" alt="Lentes de sol" class="featured__img">
+        <h4 class="featured__title t-section-title t-dark t-black">verano</h4>
+        <p class="featured__subtitle t-section-subtitle t-dark t-regular">de las sombras, al sol</p>
+        <a href="#" class="featured__button button button--featured">comprar lentes de sol</a>
+      </div>
+
+    </div>
+  </div>
   <!-- END FEATURED SECTION -->
 
-  <!-- SHIP METHOD SECTION -->
+  <!-- SHOP METHOD SECTION -->
+  <div class="main-shop-method l-section">
+    <div class="shop-method-content">
 
-  <!-- END SHIP METHOD SECTION -->
+      <div class="free-shop flex">
+        <h5 class="free-shop__title t-shop-method-title">entrega al dia siguiente <span class="t-black">gratis</span>
+        </h5>
+        <span class="free-shop__subtitle t-shop-method-subtitle">orden antes de las 3pm</span>
+        <div class="free-shop-content flex">
+          <p class="free-shop-content__descrip t-shop-method-descrip">Lorem ipsum dolor sit amet,consectetuer adipiscing
+            elit,
+            sed diam nonummy nibh euismod
+            tincidunt ut laoreet dolore magna
+            aliquam erat volutpat.</p>
+          <i class="free-shop-content__icon fas fa-shipping-fast fa-6x"></i>
+        </div>
+      </div>
+
+      <div class="credits-shop flex">
+        <h5 class="credits-shop__title t-shop-method-title">compra ahora <span class="t-black">paga despues</span>
+        </h5>
+        <span class="credits-shop__subtitle t-shop-method-subtitle">con creditos online</span>
+        <i class="credits-shop__icon fas fa-donate fa-6x"></i>
+      </div>
+
+    </div>
+  </div>
+  <!-- END SHOP METHOD SECTION -->
+
+  <!-- NEWSLETTER -->
+  <div class="main-newsletter l-container">
+    <div class="newsletter-container">
+      <div class="newsletter flex">
+        <h6 class="newsletter__title t-newsletter-title">ofertas por email</h6>
+        <p class="newsletter__descrip t-newsletter-descrip">unete a nuestra lista de correo y obten las ultimas ofertas
+          a tu bandeja
+          de entrada</p>
+        <form action="" class="newsletter-form flex">
+          <input type="email" name="email" placeholder="TU EMAIL" class="newsletter-form__input">
+          <input type="submit" name="submit" value="unirme" class="newsletter-form__button button--newsletter">
+        </form>
+      </div>
+      <div class="newsletter-logos"></div>
+    </div>
+  </div>
+  <!-- END NEWSLETTER -->
+
+  <!-- FOOTER -->
+  <footer class="main-footer l-container">
+    <div class="footer">
+      <div class="footer-social flex">
+        <a href="#" class="footer-social__link"> <img src="src/img/icon-facebook.svg" alt="icono facebook"
+            class="footer-social__facebook"></a>
+
+        <a href="#" class="footer-social__link"><img src="src/img/icon-youtube.svg" alt="icono youtube"
+            class="footer-social__youtube"></a>
+
+        <a href="#" class="footer-social__link"><img src="src/img/icon-instagram.svg" alt="icono instagram"
+            class="footer-social__instagram"></a>
+
+        <a href="#" class="footer-social__link"><img src="src/img/icon-pinterest.svg" alt="icono pinterest"
+            class="footer-social__pinterest"></a>
+
+        <a href="#" class="footer-social__link"><img src="src/img/icon-twitter.svg" alt="icono twitter"
+            class="footer-social__twitter"></a>
+      </div>
+      <div class="footer-credits flex">
+        <span class="footer-credits__copyright t-footer">© 2019 maquetado por angel salvador</span>
+        <span class="footer-credits__developers t-footer">diseñado por<br> uirepublic.net & angel salvador</span>
+      </div>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
 
   <!-- Scripts -->
   <script src="src/js/menu-toggle.js"></script>

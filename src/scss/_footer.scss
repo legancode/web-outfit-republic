@@ -1,0 +1,26 @@
+.main-footer{
+    width: 100%;
+    background-color: var(--color-fourth);
+}
+
+.footer{
+    min-width: 360px;
+    margin: 0 auto;
+    padding: 1.5rem 1.6rem;
+}
+
+.footer-social{
+    justify-content: space-around;
+}
+
+.footer-credits{
+    flex-direction: column;
+    
+    &__copyright{
+        margin-top: 2rem;
+    }
+
+    &__developers{
+        margin-top: 1rem;
+    }
+}

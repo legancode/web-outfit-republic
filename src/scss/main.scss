@@ -1,9 +1,13 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
 
+
+// General
+@import '_variables.scss', 'mixins.scss', 'base.scss','typography.scss',
+  'layout.scss';
+
 // Components
-@import '_variables.scss', 'mixins.scss', 'typography.scss', 'base.scss',
-  'layout.scss', 'header.scss', 'buttons.scss';
+@import 'buttons.scss', 'header.scss', 'newsletter.scss', 'footer.scss';
 
 // Pages
 @import 'pages/home'; 
