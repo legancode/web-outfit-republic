@@ -3,10 +3,48 @@
   width: 100%;
   height: 3.5rem;
   display: block;
+
+  @include from(m){
+    display: none;
+  }
 }
 .main-header {
-  
+  width: 100%;
+  background-image: url(../../src/img/banner-header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: red;
+  background-position: top 0px left 0px;
+  position: relative;
 }
+
+.header-container{
+  min-width: 360px;
+  height: 300px;
+  padding-top: 80px;
+
+  @include from(m){
+    padding-top: .5rem;
+  }
+
+  @include from(l){
+    width: 1150px;
+    height: 500px;
+    margin: 0 auto;
+    padding-top: 1rem;
+  }
+
+  @include from(xl){
+    width: 1450px;
+    height: 792px;
+  }
+
+  &::before{
+    @include efectBgColor(var(--color-first),0.7);
+  }
+}
+
+
 .mb-main-menu {
   width: 100%;
   height: 3.5rem;
@@ -18,10 +56,15 @@
   position: fixed;
   top: 0;
   z-index: var(--z-fixed);
+
+  @include from(m){
+    display: none;
+  }
 }
 
 .mb-logo {
   color: #fff;
+  font-weight: 300;
   border: 2px solid var(--color-third);
   padding: 0.4rem;
 }
@@ -76,19 +119,21 @@
   height: calc(100vh - 3.5rem);
   top: 3.5rem;
   right: -80vw;
-  background-color: rgba(33, 20, 44, 0.9);
+  background-color: rgba(33, 20, 44, 1);
   @include animationInOut;
 
   &__list {
+    padding: 0 1rem;
   }
   &__item {
-    border-bottom: 2px solid var(--color-first);
+    border-bottom: 0.001rem solid #fff;
   }
   &__link {
     width: 100%;
     display: block;
+    font-size: 1rem;
     color: #fff;
-    padding: 1.5rem 0;
+    padding: .9rem 0;
     text-align: center;
     @include animationInOut;
 
@@ -107,47 +152,176 @@
   right:0;
 }
 
-.main-hero{
-  height: 300px;
-  background-image: url(../../src/img/banner-header.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: red;
-  background-position: top 0px left 0px;
-  position: relative;
-
-  &::before{
-    @include efectBgColor(var(--color-first),0.7);
-  }
-}
-
 .main-menu{
   display: none;
 }
+
+// MENU APARECE EN MIN-WIDTH 960PX A MAS
+  .main-menu{
+
+    @include from(m){
+    display: flex;
+    position: relative;
+    width: 100%;
+    // background-color: var(--color-first);
+    padding: 1rem 0.5rem;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    @include from(l){
+      padding: 1rem 0;
+    }
+  }
+
+  .menu-logo{
+    color: #fff;
+    border: 2px solid var(--color-third);
+    padding: 0.6rem 1rem;
+    font-weight: 300;
+
+      @include from(l){
+        font-size: 30px;
+        border: 3px solid var(--color-third);
+      }
+  }
+
+  .menu{
+    &__list{
+      
+    }
+
+    &__item{
+    
+    }
+
+    &__link{
+    font-size: .8rem;
+    font-weight: 700;
+    color: #fff;
+    padding: 0 .7rem;
+    text-align: center;
+    letter-spacing: 2px;
+
+      @include from(l){
+        font-size: 1rem;
+        padding: 0 1rem; 
+
+      }
+
+      @include from(xl){
+        margin: 0 1.5rem 0 0;
+      }
+    }
+  }
+
+  .menu-search{
+    border-bottom: 1px solid #fff;
+    align-items: center;
+
+    &__input{
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      padding: .5rem;
+      @include webKitPlaceholderSearch;
+
+      @include from(xl){
+        width: 274px;
+      }
+    }
+
+    &__icon{
+      color: #fff;
+      cursor: pointer;
+
+      @include from(l){
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .menu-icons {
+    align-items: center;
+    height: auto;
+    font-size: 1rem;
+    padding-right: 1rem;
+
+    &__user, &__cart{
+      color: #fff;
+      cursor: pointer;
+
+      @include from(l){
+        font-size: 1.3rem;
+      }
+    }
+
+    &__user{
+      margin: 0 .7rem;
+      padding: 0 .7rem;
+      border-left: 1px solid #fff;
+      border-right: 1px solid #fff;
+    }
+
+    &__cart{
+      position: relative;
+
+      &-counter{
+        position: absolute;
+        padding: 0.1rem 0.3rem;
+        background-color: var(--color-second);
+        border-radius: 50%;
+        top: 0;
+        right: -0.9rem;
+      }
+   
+    }
+
+  
+  }
+// END MENU APARECE EN MIN-WIDTH 960PX A MAS
 
 .hero-content{
   width: 308px;
   position: relative;
   color: #fff;
-  margin-top: 80px;
   margin-left: auto;
   margin-right:auto;
   text-transform: uppercase;
   text-align: center;
 
+  @include from(m){
+    margin-top: 40px;
+  }
+
+  @include from(l){
+    margin-top: 90px;
+    width: 588px;
+  }
+
+  @include from(xl){
+    margin-top: 250px;
+    width: 588px;
+  }
+
   &__intro{
-    display: inline-block;
+    display: block;
     margin-bottom: .5rem;
     
   }
 
   &__title{
-    display: inline-block;
+    display: block;
     border-top: 9px solid var(--color-second);
     border-left: 9px solid var(--color-second);
     border-right: 9px solid var(--color-second);
-    padding: .3rem 2.3rem;
+    // padding: .3rem 2.3rem;
     position: relative;
+
+    @include from(l){
+      padding: .5rem 0;
+    }
 
     &::before, &::after{
       content: "";
@@ -172,6 +346,10 @@
     display: block;
     position: relative;
     top: -6px;
+      
+    @include from(l){
+      top: -18px;
+    }
   }
 
 }

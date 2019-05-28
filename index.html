@@ -16,43 +16,43 @@
   <!-- Agregado por el momento el div con clase fixed, hasta reemplazarlo por una funcion javascript para dejar fijo el menu  -->
   <div class="fixed"></div>
   <header class="main-header l-container">
-    <nav class="mb-main-menu flex">
-      <div class="mb-logo">outfit | <span class="strong">Republic</span></div>
-      <div class="mb-icons flex">
-        <i class="fas fa-search"></i>
-        <i class="fas fa-user"></i>
-        <i class="fas fa-shopping-basket"><span class="shopping-cart-counter">3</span>
-        </i>
-      </div>
-      <div id="mb-burger" class="mb-burger"></div>
-      <div id="mb-menu" class="mb-menu">
-        <ul class="mb-menu__list">
-          <li class="mb-menu__item">
-            <a href="#" class="mb-menu__link">INICIO</a>
-          </li>
-          <li class="mb-menu__item">
-            <a href="#" class="mb-menu__link">MUJER</a>
-          </li>
-          <li class="mb-menu__item">
-            <a href="#" class="mb-menu__link">HOMBRE</a>
-          </li>
-          <li class="mb-menu__item">
-            <a href="#" class="mb-menu__link">NIÑO</a>
-          </li>
-          <li class="mb-menu__item">
-            <a href="#" class="mb-menu__link">LENCERIA</a>
-          </li>
-          <li class="mb-menu__item">
-            <a href="#" class="mb-menu__link">ZAPATOS</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="main-hero">
-      <nav class="main-menu">
-        <div class="main-logo">outfit | <span class="strong">Republic</span></div>
+    <div class="header-container">
+      <nav class="mb-main-menu flex">
+        <div class="mb-logo">outfit|<span class="t-bold">Republic</span></div>
+        <div class="mb-icons flex">
+          <i class="fas fa-search"></i>
+          <i class="fas fa-user"></i>
+          <i class="fas fa-shopping-basket"><span class="shopping-cart-counter">3</span>
+          </i>
+        </div>
+        <div id="mb-burger" class="mb-burger"></div>
+        <div id="mb-menu" class="mb-menu">
+          <ul class="mb-menu__list">
+            <li class="mb-menu__item">
+              <a href="#" class="mb-menu__link">Inicio</a>
+            </li>
+            <li class="mb-menu__item">
+              <a href="#" class="mb-menu__link">Mujer</a>
+            </li>
+            <li class="mb-menu__item">
+              <a href="#" class="mb-menu__link">Hombres</a>
+            </li>
+            <li class="mb-menu__item">
+              <a href="#" class="mb-menu__link">Niño</a>
+            </li>
+            <li class="mb-menu__item">
+              <a href="#" class="mb-menu__link">Lenceria</a>
+            </li>
+            <li class="mb-menu__item">
+              <a href="#" class="mb-menu__link">Calzado</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="main-menu flex">
+        <div class="menu-logo">outfit|<span class="t-bold">Republic</span></div>
         <div class="menu">
-          <ul class="menu__list">
+          <ul class="menu__list flex">
             <li class="menu__item">
               <a href="#" class="menu__link">INICIO</a>
             </li>
@@ -69,10 +69,23 @@
               <a href="#" class="menu__link">LENCERIA</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">ZAPATOS</a>
+              <a href="#" class="menu__link">CALZADO</a>
             </li>
           </ul>
         </div>
+        <div class="menu-options flex">
+          <div class="menu-search flex">
+            <input type="text" placeholder="Buscar" class="menu-search__input">
+            <i class="menu-search__icon fas fa-search"></i>
+          </div>
+
+          <div class="menu-icons flex">
+            <i class="menu-icons__user fas fa-user"></i>
+            <i class="menu-icons__cart fas fa-shopping-basket"><span class="menu-icons__cart-counter">3</span>
+            </i>
+          </div>
+        </div>
+
       </nav>
       <div class="hero-content">
         <span class="hero-content__intro t-hero-intro">haz que tu armario este listo para</span>

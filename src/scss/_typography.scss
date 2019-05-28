@@ -3,20 +3,34 @@
   font-size: 12px;
   color: var (--color-fourth);
   font-weight: 900;
-  letter-spacing: 1.5px;
+  letter-spacing: .14rem;
+
+  @include from(l){
+    font-size: 23px;
+    letter-spacing: .26rem;
+  }
 }
 
 .t-hero-title{
   font-size: 55px;
   color: #fff;
   font-weight: 900;
+  letter-spacing: 5px;
+
+  @include from(l){
+    font-size: 108px;
+  }
 }
 
 .t-hero-subtitle{
   font-size: 19px;
   color: #fff;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 2px;
+
+  @include from(l){
+    font-size: 40px;
+  }
 }
 // END MAIN HERO /////////////////////////
 
@@ -123,7 +137,7 @@
   font-weight: 400;
 }
 .t-bold {
-  font-weight: 500;
+  font-weight: 700;
 }
 .t-black {
   font-weight: 900;

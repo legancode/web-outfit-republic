@@ -1,5 +1,17 @@
+@mixin from($bp){
+  @if map-has-key($breakpoints, $bp){
+    @media screen and (min-width: map-get($breakpoints, $bp)){
+      @content;
+    }
+  } @else{
+    @media screen and (min-width:$bp){
+      @content;
+    }
+  }
+}
+
 @mixin animationInOut {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 @mixin efectBgColor ($bgcolor, $opacity:0){
@@ -96,5 +108,63 @@
     color: #fff;
     text-align: center;
     opacity: 1;
+  }
+}
+
+@mixin webKitPlaceholderSearch{
+  
+  &::-webkit-input-placeholder{
+    font-size: .8rem;
+    font-weight: 300;
+    color: #fff;
+    text-align: left;
+    opacity: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @include from(l){
+      font-size: .9rem;
+    }
+  }
+  &:-moz-placeholder{
+    font-size: .8rem;
+    font-weight: 300;
+    color: #fff;
+    text-align: left;
+    opacity: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @include from(l){
+      font-size: .9rem;
+    }
+  }
+
+  &::-moz-placeholder{
+    font-size: .8rem;
+    font-weight: 300;
+    color: #fff;
+    text-align: left;
+    opacity: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @include from(l){
+      font-size: .9rem;
+    }
+  }
+
+  &:-ms-input-placeholder{
+    font-size: .8rem;
+    font-weight: 300;
+    color: #fff;
+    text-align: left;
+    opacity: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @include from(l){
+      font-size: .9rem;
+    }
   }
 }
