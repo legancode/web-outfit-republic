@@ -34,11 +34,20 @@
         color: #fff;
         border: 2px solid #fff;
         margin-bottom: 1rem;
-        // arreglar placeholder con javascript y evitar mucho codigo css
-        @include webKitPlaceholder;
-
+        
         &:focus{
-            border: 2px solid #fff;
+            outline: none;
+        }
+
+        &:active{
+            outline: none;
+        }
+
+        &::placeholder{
+            font-size: 14px;
+            text-align: center;
+            color: #fff;
+            opacity: 1;
         }
     }
 

@@ -188,13 +188,9 @@
   }
 
   .menu{
-    &__list{
-      
-    }
+    &__list{}
 
-    &__item{
-    
-    }
+    &__item{}
 
     &__link{
     font-size: .8rem;
@@ -225,7 +221,23 @@
       border: none;
       color: #fff;
       padding: .5rem;
-      @include webKitPlaceholderSearch;
+
+      &:focus{
+        outline: none;
+      }
+      &:active{
+        outline: none;
+      }
+
+      &::placeholder{
+        font-size: .8rem;
+        font-weight: 300;
+        color: #fff;
+        text-align: left;
+        opacity: 1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
 
       @include from(xl){
         width: 274px;

@@ -1,38 +1,109 @@
 // OFFERS
-.main-offers{}
+.main-offers{
+  width: 100%;
+}
   
   .top-offers{
-    margin: 1.5rem auto;
-    flex-direction: column;
-    align-items: center;
+    min-width: 360px;
+    padding: 1.5rem 0;
+    margin: 0 auto;
+
+    @include from(mbls){
+      width: 600px;
+    }
+
+    @include from(m){
+      width: 930px;
+    }
+
+    @include from(l){
+      width: 1160px;
+      padding: 2.5rem 0;
+    }
+
+    @include from(xl){
+      width: 1600px;
+      padding: 3rem 0;
+    }
   }
   
   .offers-title{
-    width: 340px;
+    width: 94%;
+    display: block;
     padding: .5rem 1rem;
+    margin: 0 auto;
     background-color: var(--color-fourth);
     text-align: center;
+
+    @include from(mbls){
+      width: 100%;
+    }
   }
   
   .nav-products{
-    width: 95%;
-    margin-top: 1rem;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 1rem 0 0 0;
+
+    @include from(l){
+      padding: 2.5rem 0 0 0;
+    }
   
     &__left, &__right{
       height: 100%;
       margin-top: 80px;
       font-size: 3rem;
       color: var(--color-fourth);
-      cursor: pointer;
     }
+  }
+
+  .arrow-active{
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .arrow-desactive{
+    opacity: .3;
+    cursor: default;
   }
   
   .products{
-    flex-direction: row;
+    width: 286px;
+    height: 391px;
+    position: relative;
+    overflow: hidden;
+
+    @include from(mbls){
+      margin: 0 1rem;
+    }
+
+    @include from(m){
+      width: calc(286px * 3);
+      margin: 0 .5rem;
+    }
+    @include from(l){
+      width: calc(286px * 3);
+      margin: 0 0rem;
+    }
+    @include from(xl){
+      width: calc(286px * 5);
+      margin: 0 1rem;
+    }
+
+    
+  }
+
+  .products-slide{
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .7s;
   }
   
   .product-item{
+    width: 286px;
+    height: 391px;
+    padding: 0 .87rem;
     display: grid; 
     grid-template-columns: 1;
     grid-template-rows: 210px 48px 42px 43px;
@@ -56,18 +127,41 @@
   // END OFFERS ///////////////////
   
   // WOMAN
-  .main-woman{}
+  .main-woman{
+      min-width: 360px;
+      width: 100%;
+  }
   .woman-container{
+      min-width: 360px;
       height: 290px;
+      padding-top: 4.5rem;
+      padding-left: 1rem;
       position: relative;
       background-image: url(../img/disenos-mujeres.jpg);
       background-size: cover;
       background-position: 50% 20%;
-      padding-top: 4.5rem;
-      padding-left: 1rem;
 
       &::before{
         @include efectBgColor(var(--color-third),0.7);
+      }
+
+      @include from(l){
+        width: 1150px;
+        height: 470px;
+        margin: 0 auto;
+        padding-top: 5rem;
+        padding-left: 2.5rem;
+        background-size: 150%;
+        background-position: top 10% left 20%;
+      }
+
+      @include from(xl){
+        width: 1600px;
+        height: 586px;
+        background-image: url(../img/disenos-mujeres.jpg);
+        background-size: 123%;
+        background-position: top 10% left 5%;
+        padding-top: 9rem;
       }
   }
   .woman-content{
@@ -75,10 +169,18 @@
       width: 300px;
       position: relative;
 
+      @include from(l){
+        width: 472px;
+      }
+
       &__title{
           display: block;
           width: 180px;
           margin-bottom: .8rem;
+
+          @include from(l){
+            width: 310px;
+          }
       }
 
       &__subtitle{
@@ -90,17 +192,35 @@
 
       &__button{
           width: 234px;
+
+          @include from(l){
+            width: 100%;
+          }
       }
   }
 
   // END WOMAN ///////////////////
   
   // OTHER SECTIONS
-  .main-others{}
+  .main-others{
+    min-width: 360px;
+  }
   .others-container{
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(360px, auto));
-}
+
+    @include from(l){
+      width: 1150px;
+      margin: 0 auto;
+      grid-template-columns: 700px auto;
+    }
+
+    @include from(xl){
+      width: 1600px;
+      margin: 0 auto;
+      grid-template-columns: 1047px auto;
+    }
+  }
   .tshirts-container{
     height: 264px;
     position: relative;
@@ -112,6 +232,20 @@
 
     &::before{
         @include efectBgColor(#000,0.5);
+      }
+
+      @include from (l){
+        background-size: 125%;
+        background-position: top 70% left 50%;
+        height: 470px;
+        padding-top: 13em;
+      }
+
+      @include from (xl){
+        background-size: 100%;
+        background-position: top 100% left 50%;
+        height: 593px;
+        padding-top: 17em;
       }
   }
   .tshirts-content{
@@ -127,10 +261,24 @@
         margin-bottom: .5rem;
       
         @include decorateSubtitle;
+
+        @include from (l){
+          width: 300px;
+          margin: .5rem 0 .7rem 0;
+        }
     }
 
     &__button{
         width: 145px;
+
+        @include from(l){
+          width: 240px;
+        }
+
+        @include from(l){
+          width: 270px;
+        }
+        
     }
   }
 
@@ -139,10 +287,27 @@
     height: 263px;
     position: relative;
     background-image: url(../img/img-stripytops.jpg);
+    background-color: red;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
     padding-top: 2rem;
     padding-right: .6rem;
+
+    @include from(l){
+        background-size: 100%;
+        background-position: top 70% left 50%;
+        height: 470px;
+        padding-top: 2rem;
+        padding-right: 1rem;
+    }
+
+    @include from (xl){
+      background-size: 110%;
+      background-position: top 0% left 10%;
+      height: 593px;
+      padding-right: 1.5rem;
+    }
   }
 
   .stripy-content{
@@ -151,10 +316,19 @@
     width: 220px;
     position: relative;
 
+    @include from(l){
+      width: 420px;
+      height: 250px;
+    }
+
     &__title{
         width: 150px;
         margin-bottom: .5rem;
         text-align: right;
+
+      @include from(l){
+        width: 230px;
+      }
     }
 
     &__subtitle{
@@ -165,6 +339,14 @@
 
     &__button{
         width: 145px;
+
+        @include from (l){
+          width: 200px;
+        }
+
+        @include from (xl){
+          width: 228px;
+        }
     }
   }
 
@@ -172,11 +354,16 @@
   // END OTHER SECTIONS ///////////////////
   
   // MEN
-.main-men{}
+.main-men{
+  min-width: 360px;
+  width: 100%;
+}
   .men-container{
+      min-width: 360px;
       height: 290px;
       position: relative;
       background-image: url(../img/disenos-hombres.jpg);
+      background-repeat:no-repeat; 
       background-size: cover;
       background-position: 50% 20%;
       padding-top: 4.5rem;
@@ -184,6 +371,25 @@
 
       &::before{
         @include efectBgColor(var(--color-second),0.5);
+      }
+
+      @include from(l){
+        width: 1150px;
+        height: 470px;
+        margin: 0 auto;
+        padding-top: 5rem;
+        padding-right: 2.5rem;
+        background-size: 110%;
+        background-position: top 10% left 80%;
+      }
+
+      @include from(xl){
+        width: 1600px;
+        height: 586px;
+        background-image: url(../img/disenos-hombres.jpg);
+        background-size: 100%;
+        background-position: top 0 left 0;
+        padding-top: 9rem;
       }
   }
   .men-content{
@@ -193,11 +399,19 @@
       width: 300px;
       position: relative;
 
+      @include from(l){
+        width: 472px;
+      }
+
       &__title{
           display: block;
           width: 180px;
           margin-bottom: .8rem;
           text-align: right;
+
+          @include from(l){
+            width: 350px;
+          }
       }
 
       &__subtitle{
@@ -209,18 +423,37 @@
 
       &__button{
           width: 234px;
+
+          @include from(l){
+            width: 100%;
+          }
       }
   }
   // END MEN ///////////////////
   
   // FEATURED
-  .main-featured{}
+  .main-featured{
+    min-width: 360px;
+    width: 100%;
+  }
   .featured-content{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, auto));
     grid-gap: 2rem;
     min-width: 360px;
     padding: 3rem 0;
+
+    @include from(l){
+      grid-gap: 0;
+      padding: 3rem 2rem;
+    }
+
+    @include from(xl){
+      width: 1600px;
+      margin: 0 auto;
+      grid-gap: 0;
+      padding: 3rem 8rem;
+    }
   }
   .featured{
 

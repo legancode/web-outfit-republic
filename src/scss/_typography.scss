@@ -39,6 +39,10 @@
   font-size: 36px;
   color: #fff;
   font-weight: 300;
+
+  @include from (l){
+    font-size: 108px;
+  }
 }
 
 .t-offer-price, .t-offer.name{
@@ -62,7 +66,15 @@
   color: #fff;
   text-transform: uppercase;
   font-weight: 400;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
+
+  @include from (l){
+    font-size: 3.75rem;
+  }
+
+  @include from (l){
+    letter-spacing: 6px;
+  }
 }
 
 .t-section-subtitle{
@@ -71,6 +83,16 @@
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
+
+  @include from(l){
+    font-size: 1.7rem;
+    letter-spacing: 3px;
+  }
+
+  @include from(xl){
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
 }
 
 .t-section-subtitle-small{
@@ -79,6 +101,37 @@
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
+
+  @include from(l){
+    font-size: 1.7rem;
+  }
+
+  @include from(l){
+    font-size: 2rem;
+  }
+}
+
+.t-featured-title{
+  font-size: 2rem;
+  color: var(--color-fourth);;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 4px;
+
+  @include from (l){
+    font-size: 40px;
+  }
+}
+
+.t-featured-subtitle{
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-fourth);;
+  text-transform: uppercase;
+
+  @include from(l){
+    font-size: 20px;
+  }
 }
 
 .t-shop-method-title{

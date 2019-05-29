@@ -98,23 +98,59 @@
 
   <!-- OFFERS SECTION -->
   <section class="main-offers l-section flex">
-    <div class="top-offers flex">
+    <div class="top-offers">
+
       <div class="offers-title">
         <h2 class="t-offer-title"><span class="t-black">OFERTAS</span> ONLINE</h2>
       </div>
+
       <div class="nav-products flex">
-        <i class="nav-products__left fas fa-chevron-left"></i>
-        <div class="products flex">
 
-          <div class="product-item">
-            <img src="src/img/shorts-rojos.jpg" alt="Shorts rojos" class=" product-item__img">
-            <span class="product-item__price t-offer-price">$20</span>
-            <p class="product-item__name t-offer-name">Shorts Rojos</p>
-            <a href="#" class="button button--offer">Ver detalles</a>
+        <img src="src/img/arrow-left.svg" alt="navegacion izquierda de ofertas top"
+          class="nav-products__left arrow-active">
+
+        <div class="products">
+          <div class="products-slide flex">
+            <div class="product-item">
+              <img src="src/img/shorts-rojos.jpg" alt="Shorts rojos" class=" product-item__img">
+              <span class="product-item__price t-offer-price">$20</span>
+              <p class="product-item__name t-offer-name">Shorts Rojos</p>
+              <a href="#" class="button button--offer">Ver detalles</a>
+            </div>
+
+            <div class="product-item">
+              <img src="src/img/vestido-nina.jpg" alt="Vestido para niña" class=" product-item__img">
+              <span class="product-item__price t-offer-price">$25</span>
+              <p class="product-item__name t-offer-name">Vestido p/ niña</p>
+              <a href="#" class="button button--offer">Ver detalles</a>
+            </div>
+
+            <div class="product-item">
+              <img src="src/img/abrigo.jpg" alt="Abrigo" class=" product-item__img">
+              <span class="product-item__price t-offer-price">$35</span>
+              <p class="product-item__name t-offer-name">Abrigo</p>
+              <a href="#" class="button button--offer">Ver detalles</a>
+            </div>
+
+            <div class="product-item">
+              <img src="src/img/botas.jpg" alt="Botas" class=" product-item__img">
+              <span class="product-item__price t-offer-price">$50</span>
+              <p class="product-item__name t-offer-name">Botas</p>
+              <a href="#" class="button button--offer">Ver detalles</a>
+            </div>
+
+            <div class="product-item">
+              <img src="src/img/bolso.jpg" alt="Bolso" class=" product-item__img">
+              <span class="product-item__price t-offer-price">$20</span>
+              <p class="product-item__name t-offer-name">Bolso</p>
+              <a href="#" class="button button--offer">Ver detalles</a>
+            </div>
           </div>
-
         </div>
-        <i class="nav-products__right fas fa-chevron-right"></i>
+
+        <img src="src/img/arrow-right.svg" alt="navegacion derecha de ofertas top"
+          class="nav-products__right arrow-active">
+
       </div>
     </div>
   </section>
@@ -138,7 +174,7 @@
 
       <div class="tshirts-container">
         <div class="tshirts-content">
-          <h3 class="tshirts-content__title t-section-title t-">camisetas</h3>
+          <h3 class="tshirts-content__title t-section-title t-black">camisetas</h3>
           <p class="tshirts-content__subtitle t-section-subtitle">nuevo stock</p>
           <a class="tshirts-content__button button button--collection-2 t-bold">Ver coleccion</a>
         </div>
@@ -176,22 +212,22 @@
 
       <div class="featured">
         <img src="src/img/img-cuero.jpg" alt="Casacas de cuero" class="featured__img">
-        <h4 class="featured__title t-section-title t-dark t-black">cuero</h4>
-        <p class="featured__subtitle t-section-subtitle t-dark t-regular">nuevas increibles casacas</p>
+        <h4 class="featured__title t-featured-title t-black">cuero</h4>
+        <p class="featured__subtitle t-featured-subtitle t-regular">nuevas increibles casacas</p>
         <a href="#" class="featured__button button button--featured">comprar casacas</a>
       </div>
 
       <div class="featured">
         <img src="src/img/img-boda.jpg" alt="Vestidos de novia" class="featured__img">
-        <h4 class="featured__title t-section-title t-dark t-black">boda</h4>
-        <p class="featured__subtitle t-section-subtitle t-dark t-regular">ofertas para dias inolvidables</p>
+        <h4 class="featured__title t-featured-title t-black">boda</h4>
+        <p class="featured__subtitle t-featured-subtitle t-regular">ofertas para dias inolvidables</p>
         <a href="#" class="featured__button button button--featured">comprar vestido de novia</a>
       </div>
 
       <div class="featured">
         <img src="src/img/img-verano.jpg" alt="Lentes de sol" class="featured__img">
-        <h4 class="featured__title t-section-title t-dark t-black">verano</h4>
-        <p class="featured__subtitle t-section-subtitle t-dark t-regular">de las sombras, al sol</p>
+        <h4 class="featured__title t-featured-title t-black">verano</h4>
+        <p class="featured__subtitle t-featured-subtitle t-regular">de las sombras, al sol</p>
         <a href="#" class="featured__button button button--featured">comprar lentes de sol</a>
       </div>
 
@@ -275,6 +311,7 @@
 
   <!-- Scripts -->
   <script src="src/js/menu-toggle.js"></script>
+  <script src="src/js/carousel.js"></script>
 </body>
 
 </html>
