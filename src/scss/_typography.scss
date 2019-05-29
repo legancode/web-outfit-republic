@@ -140,6 +140,15 @@
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 2px;
+
+  @include from(l){
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+
+  @include from(xl){
+    font-size: 45px;
+  }
 }
 .t-shop-method-subtitle{
   font-size: 1rem;
@@ -147,13 +156,30 @@
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
+
+  @include from(l){
+    font-size: 21px;
+  }
+  @include from(xl){
+    font-size: 26px;
+  }
 }
 
 .t-shop-method-descrip{
   font-size: 16px;
   font-weight: 300;
   color: #fff;
-  line-height: 1.4;
+  line-height: 1.2;
+
+  @include from(l){
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  @include from(xl){
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }
 
 .t-newsletter-title{
@@ -162,6 +188,10 @@
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 2px;
+
+  @include from(l){
+    font-size: 40px;
+  }
 }
 
 .t-newsletter-descrip{
@@ -171,6 +201,10 @@
   line-height: 1.4;
   text-align: center;
   letter-spacing: .5px;
+
+  @include from(l){
+    font-size: 20px;
+  }
 }
 
 // FOOTER
@@ -181,6 +215,11 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: .5px;
+
+  @include from (l){
+    font-size: 18px;
+    text-align: left;
+  }
 }
 // END FOOTER /////////////////////////
 

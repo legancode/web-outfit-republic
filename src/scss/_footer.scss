@@ -6,21 +6,64 @@
 .footer{
     min-width: 360px;
     margin: 0 auto;
-    padding: 1.5rem 1.6rem;
+    padding: 2rem 1.6rem;
+
+    @include from(l){
+        height:  190px;
+        padding: 2.5rem 1.6rem;
+    }
+
+    @include from(xl){
+        height:  210px;
+        padding: 3.5rem 1.6rem;
+    }
 }
 
 .footer-social{
     justify-content: space-around;
+
+    @include from(l){
+        width: 338px;
+        margin: 0 auto;
+    }
 }
 
 .footer-credits{
     flex-direction: column;
+
+    @include from(l){
+        flex-direction: row;
+        margin: 2.5rem auto;
+    }
     
     &__copyright{
         margin-top: 2rem;
+        
     }
 
     &__developers{
         margin-top: 1rem;
+
+        @include from(l){
+            &::before{
+                content: "/";
+                padding: 0 .3rem;
+            }
+        }
+    }
+
+    &__developers, &__copyright{
+        
+        @include from(l){
+            margin-top: 0;
+        }
+    }
+}
+
+.designed-by{
+    display: block;
+
+    @include from(l){
+        display: inline;
     }
 }

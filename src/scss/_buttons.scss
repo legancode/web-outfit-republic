@@ -18,18 +18,16 @@
 }
 
 .button--collection-1{
-    background-color: transparent;
-    padding: .4rem 0;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #fff;
-    border: 2px solid #fff;
-    @include animationInOut;
+    @include buttonCollection(var(--color-third));
 
-    &:hover{
-        background-color: #fff;
-        color: var(--color-third);
+    @include from(l){
+        font-size: 25px;
+        padding: .6rem 0;
     }
+}
+
+.button--collection-1-alt{
+    @include buttonCollection(var(--color-second));
 
     @include from(l){
         font-size: 25px;
@@ -38,7 +36,7 @@
 }
 
 .button--collection-2{
-    @include buttonCollection(#fff);
+    @include buttonCollection2(#fff);
 
     @include from(l){
         font-size: 20px;
@@ -50,7 +48,7 @@
 }
 
 .button--collection-2-dark{
-    @include buttonCollection(var(--color-fourth))
+    @include buttonCollection2(var(--color-fourth))
     @include from(l){
         font-size: 20px;
     }

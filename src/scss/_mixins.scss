@@ -43,7 +43,23 @@
   }
 }
 
-@mixin buttonCollection($buttonColor){
+@mixin buttonCollection($colorTextHover){
+  $colorText: #fff;
+  background-color: transparent;
+    padding: .4rem 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $colorText;
+    border: 2px solid $colorText;
+    @include animationInOut;
+
+    &:hover{
+        background-color: $colorText;
+        color: $colorTextHover;
+    }
+}
+
+@mixin buttonCollection2($buttonColor){
     position: relative;
     justify-content: flex-start;
     background-color: transparent;

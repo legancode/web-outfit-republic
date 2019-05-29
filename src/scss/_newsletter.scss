@@ -4,12 +4,24 @@
     background-position: 50% 50%;
     height: 312px;
     background-color: red;
+
+    @include from(l){
+        height: 550px;
+    }
+
+    @include from(xl){
+        height: 631px;
+    }
 }
 
 .newsletter-container{
     min-width: 360px;
     height: 100%;
     padding: 1rem 0;
+
+    @include from(l){
+        padding: 6.5rem 0;
+    }
 }
 
 .newsletter{
@@ -17,8 +29,19 @@
     flex-direction: column;
     align-items: center;
 
-    &__title, &__descrip{
+    &__title{
         margin-bottom: .5rem;
+        @include from(l){
+            margin-bottom: 1rem;
+        }
+    }
+    
+    &__descrip{
+        margin-bottom: .5rem;
+
+        @include from(l){
+            margin-bottom: 2.7rem;
+        }
     }
 }
 
@@ -27,6 +50,22 @@
     flex-direction: column;
     align-items: center;
 
+    @include from(l){
+        width: 540px;
+        height: 50px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @include from(xl){
+        width: 596px;
+        height: 59px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__input{
         width: 100%;
         height: 40px;
@@ -34,6 +73,21 @@
         color: #fff;
         border: 2px solid #fff;
         margin-bottom: 1rem;
+        padding: .5rem;
+
+        @include from(l){
+            width: 400px;
+            height: 59px;
+            margin-bottom: 0;
+            font-size: 20px;
+        }
+
+        @include from(xl){
+            width: 456px;
+            height: 59px;
+            margin-bottom: 0;
+            font-size: 20px;
+        }
         
         &:focus{
             outline: none;
@@ -44,16 +98,26 @@
         }
 
         &::placeholder{
+            font-family: 'Roboto', sans-serif;
             font-size: 14px;
             text-align: center;
             color: #fff;
             opacity: 1;
+
+            @include from(l){
+                font-size: 18px;
+                text-align: left;
+            }
         }
     }
 
     &__button{
         width: 88px;
         cursor: pointer;
+
+        @include from(l){
+            width: 118px;
+        }
     }
 }
 
@@ -62,4 +126,12 @@
     height: 57px;
     background-image: url(../img/logos.png);
     margin-top: 1.5rem;
+
+    @include from(l){
+        margin-top: 8rem;
+    }
+
+    @include from(xl){
+        margin-top: 10rem;
+    }
 }

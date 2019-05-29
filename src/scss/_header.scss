@@ -193,7 +193,7 @@
     &__item{}
 
     &__link{
-    font-size: .8rem;
+    font-size: .75rem;
     font-weight: 700;
     color: #fff;
     padding: 0 .7rem;
@@ -201,12 +201,13 @@
     letter-spacing: 2px;
 
       @include from(l){
-        font-size: 1rem;
+        font-size: .85rem;
         padding: 0 1rem; 
 
       }
 
       @include from(xl){
+        font-size: 1rem;
         margin: 0 1.5rem 0 0;
       }
     }
@@ -220,7 +221,11 @@
       background-color: transparent;
       border: none;
       color: #fff;
-      padding: .5rem;
+      padding: .3rem;
+
+      @include from(l){
+        padding: .5rem;
+      }
 
       &:focus{
         outline: none;
@@ -230,13 +235,22 @@
       }
 
       &::placeholder{
-        font-size: .8rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: .7rem;
         font-weight: 300;
         color: #fff;
         text-align: left;
-        opacity: 1;
+        opacity: .8;
         text-transform: uppercase;
         letter-spacing: 2px;
+
+        @include from(l){
+          font-size: .8rem;
+        }
+
+        @include from(xl){
+          font-size: .9rem;
+        }
       }
 
       @include from(xl){

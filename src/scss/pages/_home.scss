@@ -488,11 +488,27 @@
   // END FEATURED ///////////////////
   
   // SHIP METHOD
-  .main-shop-method{}
+  .main-shop-method{
+    width: 100%;
+  }
 
   .shop-method-content{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(360px, auto));
+
+    @include from(l){
+      width: 1050px;
+      margin: 0 auto;
+      grid-gap: 2rem;
+      padding-top: 1rem;
+      padding-bottom: 4rem;
+      grid-template-columns: repeat(2, calc((1050px - 2rem) / 2));
+    }
+
+    @include from(xl){
+      width: 1200px;
+      grid-template-columns: repeat(2, calc((1200px - 2rem) / 2));
+    }
   }
 
   .free-shop{
@@ -500,6 +516,14 @@
     align-items: center;
     background-color: var(--color-third);
     padding: 1.5rem;
+
+    @include from(l){
+      height: 320px;
+    }
+
+    @include from(xl){
+      height: 395px;
+    }
 
     &__title{
       text-align: center;
@@ -510,6 +534,10 @@
       margin-bottom: 1rem;
 
       @include decorateSubtitle;
+
+      @include from(xl){
+        margin-bottom: 1.5rem;
+      }
     }
 
    
@@ -518,6 +546,10 @@
     justify-content: space-between;
     max-width: 400px;
 
+    @include from(xl){
+      max-width: 480px;
+    }
+
     &__descrip{
       display: block;
       width: 60%;
@@ -525,9 +557,17 @@
 
     &__icon{
       width: auto;
+      font-size: 4.5rem;
       color: #fff;
       text-align: right;
       margin: auto 0 auto .5rem;
+
+      @include from(l){
+        font-size: 6rem;
+      }
+      @include from(xl){
+        font-size: 7rem;
+      }
     }
   }
 
@@ -540,18 +580,39 @@
     &__title{
       margin-bottom: 1rem;
       text-align: center;
+
+      @include from(l){
+        width: 350px;
+      }
+
+      @include from(l){
+        width: 400px;
+      }
     }
 
     &__subtitle{
       text-align: center;
-      margin-bottom: 1rem;
+      margin-bottom: 1.7rem;
 
       @include decorateSubtitle;
+
+      @include from(xl){
+        margin-bottom: 2.5rem;
+      }
     }
 
     &__icon{
       display: block;
+      font-size: 4.5rem;
       color: #fff;
+
+      @include from(l){
+        font-size: 6rem;
+      }
+
+      @include from(xl){
+        font-size: 7rem;
+      }
     }
 
    
