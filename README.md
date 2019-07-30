@@ -2,7 +2,7 @@
 
 DOCUMENTACION EN ESPAÑOL:
 
-![imagen outfit republic](/src/img/img-demo.jpg "web outfit republic")
+![imagen outfit republic](/src/img/demo.jpg "web outfit republic")
 
 ## Objetivos
 Crear una web en la cual solo se implementa HTML, CSS y JAVASCRIPT puro, sin utilizacion de frameworks ni librerias. Se hizo la creacion de solo la pagina de inicio.
@@ -26,10 +26,15 @@ Crear una web en la cual solo se implementa HTML, CSS y JAVASCRIPT puro, sin uti
 ## Ver demo
 [Outfit Republic](https://angelsalvadordev.github.io/outfit-republic/)
 
+## Recomendaciones
+Un agradecimiento a http://uirepublic.net por la creacion de este template gratuito.
+[Observa el template de UIREPUBLIC](http://uirepublic.net/free-website-templates/free-clothing-fashion-website)
+
+
 --------------------------------------------------
 ENGLISH DOCUMENTATION
 
-![image outfit republic](/src/img/img-demo.jpg "web outfit republic")
+![image outfit republic](/src/img/demo.jpg "web outfit republic")
 
 ## Objectives
 I created a website in which implement HTML, CSS and pure JS, without use frameworks or libraries. I made the creation only index page.
@@ -52,3 +57,7 @@ I created a website in which implement HTML, CSS and pure JS, without use framew
 
 ## View demo
 [Outfit Republic](https://angelsalvadordev.github.io/outfit-republic/)
+
+## Recommendations
+Thanks to http://uirepublic.net for create this free template
+[See the template of UIREPUBLIC](http://uirepublic.net/free-website-templates/free-clothing-fashion-website)

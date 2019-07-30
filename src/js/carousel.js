@@ -1,64 +1,76 @@
-let carouselComponent = {
-    carousel: document.getElementsByClassName('products')[0],
-    arrowLeft: document.getElementsByClassName('nav-products__left')[0],
-    arrowRight: document.getElementsByClassName('nav-products__right')[0],
-    slider: document.getElementsByClassName('products-slide')[0],
-    items: document.getElementsByClassName('product-item'),
-    count: 0,
-
-    runCarousel() {
-        let itemWidth = this.items[0].getBoundingClientRect().width;
-        this.slider.style.left = -itemWidth * this.count + 'px';
-
-        this.buttonState();
-    },
-
-    buttonState() {
-        if (this.count === this.items.length - 1) {
-            this.arrowRight.classList.remove('arrow-active')
-            this.arrowRight.classList.add('arrow-desactive')
-        } else {
-            this.arrowRight.classList.remove('arrow-desactive')
-            this.arrowRight.classList.add('arrow-active')
-        }
-
-        if (this.count === 0) {
-            this.arrowLeft.classList.remove('arrow-active')
-            this.arrowLeft.classList.add('arrow-desactive')
-        } else {
-            this.arrowLeft.classList.remove('arrow-desactive')
-            this.arrowLeft.classList.add('arrow-active')
-        }
-
-    },
-
-    actionsCarousel() {
-        this.arrowRight.addEventListener('click', () => {
-            this.count++
-
-            if (this.count >= this.items.length) {
-                this.count = this.items.length - 1;
-
-            } else {
-                this.runCarousel()
-            }
-
-            console.log(this.count)
-        });
-
-        this.arrowLeft.addEventListener('click', () => {
-            this.count--
-            if (this.count < 0) {
-                this.count = 0
-            } else {
-                this.runCarousel()
-            }
-
-            console.log(this.count)
-        });
-
-        this.buttonState()
+// Carousel con vanilla javascript
+class Carousel {
+    constructor(carouselContainer, showCarousel, itemsContainer, arrowLeft, arrowRight) {
+        this.carouselContainer = document.getElementById(carouselContainer)
+        this.showCarousel = document.getElementById(showCarousel)
+        this.itemsContainer = document.getElementById(itemsContainer)
+        this.arrowLeft = document.getElementById(arrowLeft)
+        this.arrowRight = document.getElementById(arrowRight)
     }
 
+    getSizesElements() {
+        let widthShowCarousel = this.showCarousel.getBoundingClientRect().width,
+            widthItem = this.itemsContainer.children[0].getBoundingClientRect().width,
+            widthItems = this.itemsContainer.getBoundingClientRect().width,
+            maxMovement = widthItems - widthShowCarousel,
+            childrenItems = this.itemsContainer.children.length
+
+        return {
+            widthShowCarousel,
+            widthItem,
+            widthItems,
+            maxMovement,
+            childrenItems
+        }
+    }
+
+    actionsCarousel() {
+        let w = this.getSizesElements()
+        let count = 0
+
+        this.arrowLeft.addEventListener('click', () => {
+            count--
+            if (count < 0) {
+                this.itemsContainer.style.left = `${-(w.maxMovement)}px`
+                count = w.maxMovement / w.widthItem
+            } else {
+                this.itemsContainer.style.left = `${-count * w.widthItem}px`
+            }
+            console.log(w.widthItem)
+            console.log(count)
+        })
+        this.arrowRight.addEventListener('click', () => {
+            count++
+            if (count > (w.maxMovement / w.widthItem)) {
+                this.itemsContainer.style.left = '0';
+                count = 0
+            } else {
+                this.itemsContainer.style.left = `${-count * w.widthItem}px`
+            }
+            console.log(w.widthItem)
+            console.log(count)
+        })
+
+        addEventListener('resize', () => {
+            w = this.getSizesElements()
+            this.itemsContainer.style.left = `${-count * w.widthItem}px`
+
+            if (count >= w.maxMovement / w.widthItem) {
+                count = w.maxMovement / w.widthItem
+                this.itemsContainer.style.left = `${-count * w.widthItem}px`
+            }
+            // console.log(actions.count)
+            console.log(w.widthItem)
+            console.log(count)
+        })
+    }
+
+    runCarousel() {
+        this.actionsCarousel()
+
+    }
 }
-carouselComponent.actionsCarousel();
+
+const myCarousel = new Carousel('products-carousel', 'products-track', 'products-slide', 'arrow-left', 'arrow-right')
+
+myCarousel.runCarousel()
